@@ -9,7 +9,7 @@ Formats
 ### MIB (.mib, .cmb)
 MIB files are used for both textures and palettes.
 MIB textures (.mib) can be either 8bpp or 16bpp, with the former relying on a colour palette MIB (.cmb).
-Colour palette MIBs are functionaly the same as a MIB texture, being a 16bpp image with a height of 1px and the length being representative of how many colours there are.
+Colour palette MIBs are functionally the same as a MIB texture, being a 16bpp image with a height of 1px and the width being representative of how many colours there are.
 The MIB file format is as follows:
 ```
 char {4}        Magic ID/Header ("MIB\0")
