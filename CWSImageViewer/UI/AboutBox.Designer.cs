@@ -47,11 +47,11 @@
             // appDescription
             // 
             this.appDescription.AutoSize = true;
-            this.appDescription.Location = new System.Drawing.Point(56, 16);
+            this.appDescription.Location = new System.Drawing.Point(48, 16);
             this.appDescription.Name = "appDescription";
-            this.appDescription.Size = new System.Drawing.Size(167, 65);
+            this.appDescription.Size = new System.Drawing.Size(177, 65);
             this.appDescription.TabIndex = 1;
-            this.appDescription.Text = "All Star Watersports Image Viewer\r\n\r\nCreated by Resistiv\r\n\r\nVersion 1.0";
+            this.appDescription.Text = "California Watersports Image Viewer\r\n\r\nCreated by Resistiv\r\n\r\nVersion 1.1";
             this.appDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gitHubLink
@@ -62,7 +62,7 @@
             this.gitHubLink.Size = new System.Drawing.Size(228, 13);
             this.gitHubLink.TabIndex = 2;
             this.gitHubLink.TabStop = true;
-            this.gitHubLink.Text = "https://github.com/Resistiv/ASWImageViewer";
+            this.gitHubLink.Text = "https://github.com/Resistiv/CWSImageViewer";
             this.gitHubLink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.gitHubLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GitHubLink_LinkClicked);
             // 

@@ -38,14 +38,14 @@
             this.convertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.convertCurrentFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.batchConvertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.convertPAKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.batchConvertPAKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.texturePicBox = new System.Windows.Forms.PictureBox();
             this.fileAttributesGroupBox = new System.Windows.Forms.GroupBox();
             this.attributeTextBox = new System.Windows.Forms.TextBox();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.convertPAKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.batchConvertPAKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.texturePicBox)).BeginInit();
             this.fileAttributesGroupBox.SuspendLayout();
@@ -77,26 +77,26 @@
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.openFileToolStripMenuItem.Text = "Open File";
             this.openFileToolStripMenuItem.Click += new System.EventHandler(this.OpenFileToolStripMenuItem_Click);
             // 
             // closeFileToolStripMenuItem
             // 
             this.closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
-            this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.closeFileToolStripMenuItem.Text = "Close File";
             this.closeFileToolStripMenuItem.Click += new System.EventHandler(this.CloseFileToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(121, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -125,6 +125,25 @@
             this.batchConvertToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.batchConvertToolStripMenuItem.Text = "Batch Convert MIB";
             this.batchConvertToolStripMenuItem.Click += new System.EventHandler(this.BatchConvertToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 6);
+            // 
+            // convertPAKToolStripMenuItem
+            // 
+            this.convertPAKToolStripMenuItem.Name = "convertPAKToolStripMenuItem";
+            this.convertPAKToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.convertPAKToolStripMenuItem.Text = "Extract PAK";
+            this.convertPAKToolStripMenuItem.Click += new System.EventHandler(this.ConvertPAKToolStripMenuItem_Click);
+            // 
+            // batchConvertPAKToolStripMenuItem
+            // 
+            this.batchConvertPAKToolStripMenuItem.Name = "batchConvertPAKToolStripMenuItem";
+            this.batchConvertPAKToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.batchConvertPAKToolStripMenuItem.Text = "Batch Extract PAK";
+            this.batchConvertPAKToolStripMenuItem.Click += new System.EventHandler(this.BatchConvertPAKToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -171,25 +190,6 @@
             this.attributeTextBox.Size = new System.Drawing.Size(200, 280);
             this.attributeTextBox.TabIndex = 0;
             // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 6);
-            // 
-            // convertPAKToolStripMenuItem
-            // 
-            this.convertPAKToolStripMenuItem.Name = "convertPAKToolStripMenuItem";
-            this.convertPAKToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.convertPAKToolStripMenuItem.Text = "Extract PAK";
-            this.convertPAKToolStripMenuItem.Click += new System.EventHandler(this.ConvertPAKToolStripMenuItem_Click);
-            // 
-            // batchConvertPAKToolStripMenuItem
-            // 
-            this.batchConvertPAKToolStripMenuItem.Name = "batchConvertPAKToolStripMenuItem";
-            this.batchConvertPAKToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.batchConvertPAKToolStripMenuItem.Text = "Batch Extract PAK";
-            this.batchConvertPAKToolStripMenuItem.Click += new System.EventHandler(this.BatchConvertPAKToolStripMenuItem_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,7 +203,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "MainWindow";
-            this.Text = "ASW Image Viewer";
+            this.Text = "CWS Image Viewer";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.texturePicBox)).EndInit();

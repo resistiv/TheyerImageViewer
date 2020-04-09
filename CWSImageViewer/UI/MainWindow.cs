@@ -30,7 +30,7 @@ namespace ASWImageViewer.UI
         private void OpenFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "ASW texture file (*.mib)|*.mib";
+            openFileDialog.Filter = "CWS texture file (*.mib)|*.mib";
             openFileDialog.RestoreDirectory = true;
             openFileDialog.ShowHelp = false;
             openFileDialog.Multiselect = false;

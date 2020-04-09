@@ -1,6 +1,6 @@
-All Star Watersports Image Viewer
+California Watersports Image Viewer
 =================================
-A simple Windows Forms application for viewing and converting MIB (.mib) files found in the PS1 game All Star Watersports (Europe). Also includes functionality to extract PAK (.pak) files that are found in the game's files, which often include MIB files.
+A simple Windows Forms application for viewing and converting MIB (.mib) files found in the PS1 games California Watersports (Europe) (En,Fr,De), All Star Watersports (Europe), and All Star Action (Europe). Also includes functionality to extract PAK (.pak) files that are found in the game's files, which often include MIB files.
 Mainly intended to be a personal challenge to learn WinForms and how to integrate it with basic function management.
 Uses a snippet of code from [Barubary's TiledGGD](https://github.com/Barubary/tiledggd) to process image palette colours.
 

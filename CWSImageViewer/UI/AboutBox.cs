@@ -30,7 +30,7 @@ namespace ASWImageViewer.UI
         private void VisitLink()
         {
             gitHubLink.LinkVisited = true;
-            System.Diagnostics.Process.Start("https://github.com/Resistiv/ASWImageViewer");
+            System.Diagnostics.Process.Start("https://github.com/Resistiv/CWSImageViewer");
         }
     }
 }
