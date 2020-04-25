@@ -1,8 +1,8 @@
 ﻿using System;
-using ASWImageViewer.UI;
+using TheyerImageViewer.UI;
 using System.Windows.Forms;
 
-namespace ASWImageViewer
+namespace TheyerImageViewer
 {
     static class Program
     {

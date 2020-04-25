@@ -1,7 +1,7 @@
 .vs/
 packages/
-CWSImageViewer/bin/
-CWSImageViewer/obj/
+TheyerImageViewer/bin/
+TheyerImageViewer/obj/
 [Dd]esktop.ini
 Thumbs.db
 Thumbs.db:encryptable

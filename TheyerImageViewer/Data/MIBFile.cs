@@ -1,21 +1,22 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ASWImageViewer.Data
+namespace TheyerImageViewer.Data
 {
     class MIBFile
     {
-        private string fileName;
-        private bool isValid;
-        private int bpp;
-        private int width;
-        private int height;
-        private MIBFile paletteFile;
-        private Color[] palette;
-        private Bitmap image;
-        private BinaryReader br;
+        private readonly string fileName;
+        private readonly bool isValid;
+        private readonly int bpp;
+        private readonly int width;
+        private readonly int height;
+        private readonly MIBFile paletteFile;
+        private readonly Color[] palette;
+        private readonly Bitmap image;
+        private readonly BinaryReader br;
 
         public MIBFile(string fileName)
         {
@@ -105,19 +106,20 @@ namespace ASWImageViewer.Data
             }
         }
 
-        /*
-        This code snippet for getting a color value from a 2 byte source is borrowed from Barubary's TiledGGD, which can be found at: https://github.com/Barubary/tiledggd
-
-        Copyright (c) 2010 Barubary
-
-        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-        */
         private Color GetColor(byte[] data)
         {
+            /*
+            This code snippet for getting a color value from a 2 byte source is borrowed from Barubary's TiledGGD, which can be found at: https://github.com/Barubary/tiledggd
+
+            Copyright (c) 2010 Barubary
+
+            Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+            The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+            */
+
             uint bt;
             uint b1, b2;
             uint fst, scn, thd;
@@ -128,7 +130,7 @@ namespace ASWImageViewer.Data
 
             bt = (b1 << 8) | b2;
 
-            a = (bt & 0x8000) >> 15;
+            // a = (bt & 0x8000) >> 15;
             fst = (bt & 0x7C00) >> 7;
             scn = (bt & 0x03E0) >> 2;
             thd = (bt & 0x001F) << 3;
@@ -146,25 +148,32 @@ namespace ASWImageViewer.Data
 
         public void Render()
         {
-            if (bpp == 8)
+            try
             {
-                for (int y = 0; y < image.Height; y++)
+                if (bpp == 8)
                 {
-                    for (int x = 0; x < image.Width; x++)
+                    for (int y = 0; y < image.Height; y++)
                     {
-                        image.SetPixel(x, y, paletteFile.palette[br.ReadByte()]);
+                        for (int x = 0; x < image.Width; x++)
+                        {
+                            image.SetPixel(x, y, paletteFile.palette[br.ReadByte()]);
+                        }
+                    }
+                }
+                else
+                {
+                    for (int y = 0; y < image.Height; y++)
+                    {
+                        for (int x = 0; x < image.Width; x++)
+                        {
+                            image.SetPixel(x, y, GetColor(br.ReadBytes(2)));
+                        }
                     }
                 }
             }
-            else
+            catch (Exception e)
             {
-                for (int y = 0; y < image.Height; y++)
-                {
-                    for (int x = 0; x < image.Width; x++)
-                    {
-                        image.SetPixel(x, y, GetColor(br.ReadBytes(2)));
-                    }
-                }
+                MessageBox.Show($"Error at MIB render time: {e.Message}");
             }
             br.Close();
         }

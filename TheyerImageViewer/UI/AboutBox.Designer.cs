@@ -1,4 +1,4 @@
-﻿namespace ASWImageViewer.UI
+﻿namespace TheyerImageViewer.UI
 {
     partial class AboutBox
     {
@@ -47,22 +47,22 @@
             // appDescription
             // 
             this.appDescription.AutoSize = true;
-            this.appDescription.Location = new System.Drawing.Point(48, 16);
+            this.appDescription.Location = new System.Drawing.Point(72, 16);
             this.appDescription.Name = "appDescription";
-            this.appDescription.Size = new System.Drawing.Size(177, 65);
+            this.appDescription.Size = new System.Drawing.Size(128, 65);
             this.appDescription.TabIndex = 1;
-            this.appDescription.Text = "California Watersports Image Viewer\r\n\r\nCreated by Resistiv\r\n\r\nVersion 1.1";
+            this.appDescription.Text = "TheyerGFX Image Viewer\r\n\r\nCreated by Resistiv\r\n\r\nVersion 1.2";
             this.appDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gitHubLink
             // 
             this.gitHubLink.AutoSize = true;
-            this.gitHubLink.Location = new System.Drawing.Point(24, 104);
+            this.gitHubLink.Location = new System.Drawing.Point(16, 104);
             this.gitHubLink.Name = "gitHubLink";
-            this.gitHubLink.Size = new System.Drawing.Size(228, 13);
+            this.gitHubLink.Size = new System.Drawing.Size(236, 13);
             this.gitHubLink.TabIndex = 2;
             this.gitHubLink.TabStop = true;
-            this.gitHubLink.Text = "https://github.com/Resistiv/CWSImageViewer";
+            this.gitHubLink.Text = "https://github.com/Resistiv/TheyerImageViewer";
             this.gitHubLink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.gitHubLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GitHubLink_LinkClicked);
             // 

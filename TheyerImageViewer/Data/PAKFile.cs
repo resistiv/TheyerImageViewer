@@ -2,18 +2,18 @@
 using System.Text;
 using System.Windows.Forms;
 
-namespace ASWImageViewer.Data
+namespace TheyerImageViewer.Data
 {
     class PAKFile
     {
-        private string fileName;
-        private bool isValid;
-        private int fileCount;
-        private string[] internalNames;
-        private int[] internalLengths;
-        private int[] internalOffsets;
-        private string outputDirectory;
-        private BinaryReader br;
+        private readonly string fileName;
+        private readonly bool isValid;
+        private readonly int fileCount;
+        private readonly string[] internalNames;
+        private readonly int[] internalLengths;
+        private readonly int[] internalOffsets;
+        private readonly string outputDirectory;
+        private readonly BinaryReader br;
 
         public PAKFile(string fileName)
         {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ASWImageViewer.UI
+namespace TheyerImageViewer.UI
 {
     public partial class AboutBox : Form
     {
@@ -30,7 +30,7 @@ namespace ASWImageViewer.UI
         private void VisitLink()
         {
             gitHubLink.LinkVisited = true;
-            System.Diagnostics.Process.Start("https://github.com/Resistiv/CWSImageViewer");
+            System.Diagnostics.Process.Start("https://github.com/Resistiv/TheyerImageViewer");
         }
     }
 }
