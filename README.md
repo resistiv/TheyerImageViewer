@@ -22,7 +22,7 @@ byte {x}        Image data
 
 ### P1I (.p1i, .p1c)
 P1I files are used for both textures and palettes.
-P1I textures (.p1i) can be either 8bpp or 16bpp, with the former relying on a colour palette MIB (.p1c).
+P1I textures (.p1i) can be either 8bpp or 16bpp, with the former relying on a colour palette P1I (.p1c).
 Colour palette P1Is are functionally the same as a P1I texture, being a 16bpp image with a height of 1px and the width being representative of how many colours there are.
 The P1I file format is as follows:
 ```
