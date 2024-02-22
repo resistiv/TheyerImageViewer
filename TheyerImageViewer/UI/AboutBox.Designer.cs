@@ -51,7 +51,7 @@
             this.appDescription.Name = "appDescription";
             this.appDescription.Size = new System.Drawing.Size(128, 65);
             this.appDescription.TabIndex = 1;
-            this.appDescription.Text = "TheyerGFX Image Viewer\r\n\r\nCreated by Resistiv\r\n\r\nVersion 1.2";
+            this.appDescription.Text = "TheyerGFX Image Viewer\r\n\r\nCreated by Resistiv\r\n\r\nVersion 1.3";
             this.appDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gitHubLink
