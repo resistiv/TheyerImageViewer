@@ -211,7 +211,7 @@ namespace TheyerImageViewer.UI
             saveFileDialog.OverwritePrompt = true;
             saveFileDialog.AddExtension = true;
             saveFileDialog.RestoreDirectory = true;
-            saveFileDialog.FileName = Path.GetFileName(currentMIB.GetFileName()) + ".png";
+            saveFileDialog.FileName = Path.GetFileName(currentP1I.GetFileName()) + ".png";
             DialogResult result = saveFileDialog.ShowDialog();
 
             if (result == DialogResult.OK || result == DialogResult.Yes)
